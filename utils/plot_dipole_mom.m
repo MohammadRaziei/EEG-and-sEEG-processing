@@ -1,4 +1,6 @@
-function plot_dipole_mom(pos,mom)
+function plot_dipole_mom(pos,mom,scale)
+if nargin < 3, scale = 10; end
 quiver3(pos(1), pos(2), pos(3),...
-    mom(1), mom(2), mom(3), ...
-    10,'LineWidth',3,'Color','y')
+    mom(1), mom(2), mom(3), scale,...
+    'LineWidth',3, 'markersize', 100, 'Color','y')
+end
